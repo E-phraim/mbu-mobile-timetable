@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MB&U Training Center Timetable</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>MB&U Training Center Timetable</h1>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="batchSelect">Select Batch:</label>
+                <select id="batchSelect">
+                    <option value="">Choose a batch...</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="currentDate">Current Date:</label>
+                <input type="date" id="currentDate">
+            </div>
+            <button onclick="generateTimetable()">View Timetable</button>
+        </div>
+
+        <div id="statusIndicator" class="status-indicator" style="display: none;"></div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color basic-color"></div>
+                <span>CLASS (Basic Program)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color lab-color"></div>
+                <span>LAB (Practical)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color home-color"></div>
+                <span>HOME (Practice)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color advanced-color"></div>
+                <span>Advanced Program</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color current-color"></div>
+                <span>Current Week</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color completed-color"></div>
+                <span>Completed</span>
+            </div>
+        </div>
+
+        <div id="timetable"></div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
